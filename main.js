@@ -14,6 +14,59 @@ const rl = readline.createInterface({
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
 
+  hand1 = hand1.toLowerCase().trim()
+  hand2 = hand2.toLowerCase().trim()
+
+  switch(hand1){
+    case 'rock':
+
+      switch(hand2){
+        case 'rock':
+          return "It's a tie!"
+          break
+
+        case 'paper':
+          return "Hand two wins!"
+          break
+
+        case 'scissors':
+          return "Hand one wins!"
+        
+      }
+      break
+
+      case 'paper':
+        switch(hand2){
+          case 'rock':
+            return "Hand one wins!"
+            break
+  
+          case 'paper':
+            return "It's a tie!"
+            break
+  
+          case 'scissors':
+            return "Hand two wins!"
+          
+        }
+        break
+
+        case 'scissors':
+          switch(hand2){
+            case 'rock':
+              return "Hand two wins! "
+              break
+    
+            case 'paper':
+              return "Hand one wins!"
+              break
+    
+            case 'scissors':
+              return "It's a tie!"
+            
+          }
+  }
+
   // Write code here
   // Use the unit test to see what is expected
 
